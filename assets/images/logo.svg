@@ -1,0 +1,99 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Glow -->
+    <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 15 -5" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        
+        <!-- Gradients -->
+        <linearGradient id="breadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFE4B5"/>
+            <stop offset="100%" style="stop-color:#DEB887"/>
+        </linearGradient>
+        
+        <linearGradient id="custardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFD700"/>
+            <stop offset="100%" style="stop-color:#FFA500"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Logo Group -->
+    <g transform="translate(20, 20)">
+        <!-- Bread Icon -->
+        <g filter="url(#glow)">
+            <path d="M10,40 Q40,20 70,40 Q40,60 10,40" 
+                  fill="url(#breadGradient)" 
+                  stroke="#B8860B" 
+                  stroke-width="2"/>
+            
+            <!-- Custard -->
+            <path d="M20,38 Q40,25 60,38 Q40,50 20,38" 
+                  fill="url(#custardGradient)" 
+                  stroke="#DAA520" 
+                  stroke-width="1.5"/>
+            
+            <!-- Steam Lines -->
+            <g stroke="#B8860B" stroke-width="1.5" opacity="0.7">
+                <path d="M30,25 Q35,20 40,25">
+                    <animate attributeName="d" 
+                            dur="2s" 
+                            values="M30,25 Q35,20 40,25;M30,25 Q35,15 40,25;M30,25 Q35,20 40,25" 
+                            repeatCount="indefinite"/>
+                </path>
+                <path d="M45,20 Q50,15 55,20">
+                    <animate attributeName="d" 
+                            dur="2.5s" 
+                            values="M45,20 Q50,15 55,20;M45,20 Q50,10 55,20;M45,20 Q50,15 55,20" 
+                            repeatCount="indefinite"/>
+                </path>
+            </g>
+        </g>
+
+        <!-- Text -->
+        <g transform="translate(85, 45)">
+            <text font-family="Prompt, sans-serif" font-size="24" font-weight="bold" fill="#663300">
+                ขนมปัง
+            </text>
+            <text x="0" y="25" font-family="Prompt, sans-serif" font-size="22" font-weight="500" fill="#FF9933">
+                สังขยา
+            </text>
+        </g>
+
+        <!-- Decorative Elements -->
+        <g transform="translate(220, 35)">
+            <circle cx="0" cy="0" r="3" fill="#FF9933" opacity="0.8">
+                <animate attributeName="r" 
+                         dur="2s" 
+                         values="3;4;3" 
+                         repeatCount="indefinite"/>
+            </circle>
+            <circle cx="10" cy="-10" r="2" fill="#FF9933" opacity="0.6">
+                <animate attributeName="r" 
+                         dur="2.5s" 
+                         values="2;3;2" 
+                         repeatCount="indefinite"/>
+            </circle>
+            <circle cx="15" cy="5" r="2.5" fill="#FF9933" opacity="0.7">
+                <animate attributeName="r" 
+                         dur="3s" 
+                         values="2.5;3.5;2.5" 
+                         repeatCount="indefinite"/>
+            </circle>
+        </g>
+    </g>
+
+    <!-- Tagline -->
+    <text x="150" y="85" 
+          font-family="Prompt, sans-serif" 
+          font-size="12" 
+          font-weight="300" 
+          fill="#666666" 
+          text-anchor="middle">
+        อร่อยทุกคำ หอมหวานทุกชิ้น
+    </text>
+</svg>

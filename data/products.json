@@ -1,0 +1,302 @@
+{
+    "version": "1.0",
+    "lastUpdated": "2024-11-05T10:00:00Z",
+    "categories": [
+        {
+            "id": "bestseller",
+            "name": "สินค้าขายดี",
+            "icon": "fa-star",
+            "order": 1
+        },
+        {
+            "id": "premium",
+            "name": "พรีเมียม",
+            "icon": "fa-gem",
+            "order": 2
+        },
+        {
+            "id": "recommended",
+            "name": "แนะนำ",
+            "icon": "fa-thumbs-up",
+            "order": 3
+        },
+        {
+            "id": "seasonal",
+            "name": "ตามฤดูกาล",
+            "icon": "fa-calendar",
+            "order": 4
+        }
+    ],
+    "products": [
+        {
+            "id": "original-custard",
+            "name": "ขนมปังสังขยาไข่แท้",
+            "price": 35,
+            "description": "สูตรดั้งเดิม ทำจากไข่ไก่สด หอมมัน อร่อย ทำสดใหม่ทุกวัน",
+            "image": "assets/images/1.webp",
+            "category": "bestseller",
+            "available": true,
+            "stock": 100,
+            "tags": ["bestseller", "recommended"],
+            "nutrition": {
+                "calories": 250,
+                "protein": 5,
+                "carbs": 30,
+                "fat": 12
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "pandan-custard",
+            "name": "ขนมปังสังขยาใบเตย",
+            "price": 40,
+            "description": "หอมใบเตยธรรมชาติ 100% สีเขียวสดใส ไม่ใช้สีผสมอาหาร",
+            "image": "assets/images/2.webp",
+            "category": "recommended",
+            "available": true,
+            "stock": 80,
+            "tags": ["popular", "healthy"],
+            "nutrition": {
+                "calories": 245,
+                "protein": 5,
+                "carbs": 32,
+                "fat": 11
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "ใบเตยสด", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "durian-custard",
+            "name": "ขนมปังสังขยาทุเรียนหมอนทอง",
+            "price": 55,
+            "description": "ทำจากทุเรียนหมอนทองแท้ เนื้อเข้มข้น หอมหวาน",
+            "image": "assets/images/3.webp",
+            "category": "premium",
+            "available": true,
+            "stock": 50,
+            "tags": ["premium", "seasonal"],
+            "nutrition": {
+                "calories": 280,
+                "protein": 6,
+                "carbs": 28,
+                "fat": 15
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "ทุเรียนหมอนทอง", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "matcha-custard",
+            "name": "ขนมปังสังขยาชาเขียวมัทฉะ",
+            "price": 45,
+            "description": "ชาเขียวมัทฉะแท้จากญี่ปุ่น รสชาติเข้มข้น หอมกลมกล่อม",
+            "image": "assets/images/4.webp",
+            "category": "premium",
+            "available": true,
+            "stock": 65,
+            "tags": ["premium", "healthy"],
+            "nutrition": {
+                "calories": 245,
+                "protein": 5,
+                "carbs": 32,
+                "fat": 11
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "ชาเขียวมัทฉะ", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "chocolate-custard",
+            "name": "ขนมปังสังขยาช็อกโกแลต",
+            "price": 45,
+            "description": "ช็อกโกแลตเบลเยียมแท้ ผสมผสานกับสังขยาได้อย่างลงตัว",
+            "image": "assets/images/5.webp",
+            "category": "recommended",
+            "available": true,
+            "stock": 70,
+            "tags": ["premium", "kids-favorite"],
+            "nutrition": {
+                "calories": 275,
+                "protein": 6,
+                "carbs": 35,
+                "fat": 14
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "ช็อกโกแลตเบลเยียม", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "mango-custard",
+            "name": "ขนมปังสังขยามะม่วงน้ำดอกไม้",
+            "price": 50,
+            "description": "มะม่วงน้ำดอกไม้สุก หวานหอม ผสมผสานกับสังขยาได้อย่างลงตัว",
+            "image": "assets/images/12.webp",
+            "category": "seasonal",
+            "available": true,
+            "stock": 40,
+            "tags": ["seasonal", "limited"],
+            "nutrition": {
+                "calories": 260,
+                "protein": 5,
+                "carbs": 35,
+                "fat": 11
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "มะม่วงน้ำดอกไม้", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "coconut-custard",
+            "name": "ขนมปังสังขยามะพร้าวอ่อน",
+            "price": 40,
+            "description": "มะพร้าวอ่อนแท้ หอมหวาน เนื้อนุ่ม อร่อยไม่เลี่ยน",
+            "image": "assets/images/6.webp",
+            "category": "recommended",
+            "available": true,
+            "stock": 60,
+            "tags": ["recommended", "healthy"],
+            "nutrition": {
+                "calories": 265,
+                "protein": 4,
+                "carbs": 33,
+                "fat": 13
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "มะพร้าวอ่อน", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "coffee-custard",
+            "name": "ขนมปังสังขยากาแฟ",
+            "price": 45,
+            "description": "กาแฟคั่วพิเศษ หอมกรุ่น ผสมผสานกับสังขยาได้อย่างลงตัว",
+            "image": "assets/images/7.webp",
+            "category": "recommended",
+            "available": true,
+            "stock": 55,
+            "tags": ["recommended"],
+            "nutrition": {
+                "calories": 255,
+                "protein": 5,
+                "carbs": 33,
+                "fat": 12
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "กาแฟคั่ว", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "thai-tea-custard",
+            "name": "ขนมปังสังขยาชาไทย",
+            "price": 45,
+            "description": "ชาไทยแท้ หอมกลมกล่อม หวานมันกำลังดี",
+            "image": "assets/images/8.webp",
+            "category": "recommended",
+            "available": true,
+            "stock": 45,
+            "tags": ["recommended", "popular"],
+            "nutrition": {
+                "calories": 270,
+                "protein": 5,
+                "carbs": 34,
+                "fat": 12
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "ชาไทย", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "taro-custard",
+            "name": "ขนมปังสังขยาเผือก",
+            "price": 45,
+            "description": "เผือกหอมแท้ หวานมัน เนื้อเนียนนุ่ม",
+            "image": "assets/images/9.webp",
+            "category": "recommended",
+            "available": true,
+            "stock": 50,
+            "tags": ["recommended", "popular"],
+            "nutrition": {
+                "calories": 265,
+                "protein": 5,
+                "carbs": 35,
+                "fat": 11
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "เผือก", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "milk-custard",
+            "name": "ขนมปังสังขยาชานม",
+            "price": 45,
+            "description": "ชานมสูตรพิเศษ หอมกลมกล่อม ดื่มด่ำได้ในคำเดียว",
+            "image": "assets/images/10.webp",
+            "category": "bestseller",
+            "available": true,
+            "stock": 75,
+            "tags": ["bestseller", "popular"],
+            "nutrition": {
+                "calories": 270,
+                "protein": 5,
+                "carbs": 34,
+                "fat": 12
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "ชาดำ", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        },
+        {
+            "id": "banana-custard",
+            "name": "ขนมปังสังขยากล้วยหอม",
+            "price": 40,
+            "description": "กล้วยหอมทองสุก หวานหอม ทานง่าย อิ่มนาน",
+            "image": "assets/images/11.webp",
+            "category": "recommended",
+            "available": true,
+            "stock": 60,
+            "tags": ["recommended", "healthy"],
+            "nutrition": {
+                "calories": 255,
+                "protein": 4,
+                "carbs": 36,
+                "fat": 10
+            },
+            "ingredients": ["ไข่ไก่", "นมสด", "กล้วยหอม", "น้ำตาล", "แป้งขนมปัง"],
+            "allergens": ["ไข่", "นม", "กลูเตน"]
+        }
+    ],
+    "tags": {
+        "bestseller": {
+            "name": "ขายดี",
+            "color": "#FFD700",
+            "icon": "fa-star"
+        },
+        "recommended": {
+            "name": "แนะนำ",
+            "color": "#4CAF50",
+            "icon": "fa-thumbs-up"
+        },
+        "premium": {
+            "name": "พรีเมียม",
+            "color": "#9C27B0",
+            "icon": "fa-gem"
+        },
+        "healthy": {
+            "name": "เพื่อสุขภาพ",
+            "color": "#8BC34A",
+            "icon": "fa-heart"
+        },
+        "popular": {
+            "name": "ยอดนิยม",
+            "color": "#FF5722",
+            "icon": "fa-fire"
+        },
+        "seasonal": {
+            "name": "ตามฤดูกาล",
+            "color": "#FF9800",
+            "icon": "fa-calendar"
+        },
+        "limited": {
+            "name": "จำกัด",
+            "color": "#F44336",
+            "icon": "fa-clock"
+        },
+        "kids-favorite": {
+            "name": "เด็กชอบ",
+            "color": "#E91E63",
+            "icon": "fa-child"
+        }
+    }
+}

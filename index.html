@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+
+<head>
+  <!-- เพิ่ม meta tag สำหรับ theme-color -->
+  <meta name="theme-color" content="#FF9800" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ร้านขนมปังสังขยา | อร่อยทุกคำ หอมหวานทุกชิ้น</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/notification.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script src="service-worker.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="/">
+            <img src="assets/images/logo.svg" alt="ขนมปังสังขยา" id="siteLogo">
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <button class="nav-btn icon-customer" id="editProfileBtn" title="โปรไฟล์/รายละเอียดที่อยู่">โปรไฟล์</button>
+          <button class="nav-btn icon-history" id="viewOrderHistoryBtn">ประวัติสั่งซื้อ</button>
+          <button class="nav-btn icon-day" id="themeToggle">โหมดมืด</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main role="main">
+    <!-- Hero Section -->
+    <section class="hero section">
+      <div class="hero-content">
+        <h1 class="hero-title">ขนมปังสังขยา</h1>
+        <p class="hero-subtitle">อร่อยทุกคำ หอมหวานทุกชิ้น</p>
+        <div class="hero-features">
+          <div class="feature">
+            <i class="fas fa-egg"></i>
+            <span>ไข่สดทุกวัน</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-leaf"></i>
+            <span>วัตถุดิบธรรมชาติ</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shipping-fast"></i>
+            <span>จัดส่งฟรี</span>
+          </div>
+        </div>
+        <a href="#products" class="cta-button">ดูเมนูทั้งหมด</a>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">เมนูของเรา</h2>
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="ค้นหาเมนู...">
+          </div>
+        </div>
+
+        <div id="categoryFilters" class="category-filters"></div>
+        <div id="productGrid" class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-medal"></i>
+            <h3>คุณภาพเยี่ยม</h3>
+            <p>ใช้วัตถุดิบคุณภาพดี สด ใหม่ทุกวัน</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-truck"></i>
+            <h3>จัดส่งรวดเร็ว</h3>
+            <p>ส่งด่วนภายใน 1 ชั่วโมง</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-heart"></i>
+            <h3>ใส่ใจทุกขั้นตอน</h3>
+            <p>พิถีพิถันในการผลิตทุกชิ้น</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <img src="assets/images/logo.svg" alt="Logo" class="footer-logo">
+          <p>เปิดทุกวัน 07:00 - 19:00 น.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-line"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h3>ติดต่อเรา</h3>
+          <p><i class="fas fa-phone"></i> 099-999-9999</p>
+          <p><i class="fas fa-envelope"></i> contact@bakery.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> 123 ถ.สุขุมวิท กรุงเทพฯ</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ร้านขนมปังสังขยา. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <button class="icon-cart" id="cartBtn"><span class="cart-count">0</span></button>
+
+  <!-- Template สำหรับกล่องค้นหา -->
+  <template id="search-bar-template">
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="search" id="searchInput" class="search-input" placeholder="ค้นหาสินค้า...">
+    </div>
+  </template>
+
+  <!-- Template สำหรับหมวดหมู่ -->
+  <template id="category-filter-template">
+    <button class="btn category-filter" data-attr="data-category:category">
+      <i data-class="icon"></i>
+      <span data-text="name"></span>
+    </button>
+  </template>
+
+  <!-- Template สำหรับสินค้า -->
+  <template id="product-card-template">
+    <div class="product-card" data-attr="data-id:id">
+      <div class="product-image">
+        <img data-attr="src:image;alt:name" loading="lazy">
+        <div class="product-tags" data-container="tags"></div>
+      </div>
+      <div class="product-content">
+        <h3 class="product-title" data-text="name"></h3>
+        <p class="product-description" data-text="description"></p>
+        <div class="product-nutrition" data-if="hasNutrition">
+          <div class="nutrition-item">
+            <span>แคลอรี่</span>
+            <strong data-text="nutrition.calories"></strong>
+          </div>
+          <div class="nutrition-item">
+            <span>โปรตีน</span>
+            <strong><span data-text="nutrition.protein"></span>g</strong>
+          </div>
+          <div class="nutrition-item">
+            <span>คาร์บ</span>
+            <strong><span data-text="nutrition.carbs"></span>g</strong>
+          </div>
+          <div class="nutrition-item">
+            <span>ไขมัน</span>
+            <strong><span data-text="nutrition.fat"></span>g</strong>
+          </div>
+        </div>
+        <div class="product-info">
+          <div data-if="ingredients">
+            <h4>ส่วนประกอบ</h4>
+            <p data-text="ingredientsList"></p>
+          </div>
+          <div data-if="allergens">
+            <h4>สารก่อภูมิแพ้</h4>
+            <p data-text="allergensList"></p>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price" data-text="formattedPrice"></div>
+          <button class="add-to-cart-btn" data-product-id="" data-attr="data-product-id:id" data-class="buttonClass" data-if="available">
+            <i class="fas fa-cart-plus"></i>
+            <span data-text="buttonText"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Template สำหรับ tags -->
+  <template id="product-tags-template">
+    <div class="product-tag" data-attr="style:style">
+      <i data-class="icon"></i>
+      <span data-text="name"></span>
+    </div>
+  </template>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/Storage.js"></script>
+  <script src="js/ThemeManager.js"></script>
+  <script src="js/TemplateManager.js"></script>
+  <script src="js/NotificationManager.js"></script>
+  <script src="js/ProductController.js"></script>
+  <script src="js/ProductService.js"></script>
+  <script src="js/ProductView.js"></script>
+  <script src="js/CartManager.js"></script>
+  <script src="js/CheckoutManager.js"></script>
+  <script src="js/CustomerManager.js"></script>
+  <script src="js/CustomerStorage.js"></script>
+  <script src="js/OrderManager.js"></script>
+  <script src="js/OrderHistoryManager.js"></script>
+  <script src="js/PaymentManager.js"></script>
+  <script src="js/AdminNotifier.js"></script>
+  <script src="js/NotificationService.js"></script>
+  <script src="js/WebPushNotification.js"></script>
+  <script src="js/App.js"></script>
+</body>
+
+</html>
